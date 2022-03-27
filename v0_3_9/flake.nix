@@ -11,6 +11,7 @@
   inputs.src-nimhdf5-v0_3_9.ref   = "refs/tags/v0.3.9";
   inputs.src-nimhdf5-v0_3_9.owner = "Vindaar";
   inputs.src-nimhdf5-v0_3_9.repo  = "nimhdf5";
+  inputs.src-nimhdf5-v0_3_9.dir   = "";
   inputs.src-nimhdf5-v0_3_9.type  = "github";
   
   outputs = { self, nixpkgs, flakeNimbleLib, ...}@deps:
