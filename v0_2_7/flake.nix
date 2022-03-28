@@ -11,7 +11,6 @@
   inputs.src-nimhdf5-v0_2_7.ref   = "refs/tags/v0.2.7";
   inputs.src-nimhdf5-v0_2_7.owner = "Vindaar";
   inputs.src-nimhdf5-v0_2_7.repo  = "nimhdf5";
-  inputs.src-nimhdf5-v0_2_7.dir   = "";
   inputs.src-nimhdf5-v0_2_7.type  = "github";
   
   inputs."arraymancer".owner = "nim-nix-pkgs";

@@ -11,8 +11,15 @@
   inputs.src-nimhdf5-v0_3_10.ref   = "refs/tags/v0.3.10";
   inputs.src-nimhdf5-v0_3_10.owner = "Vindaar";
   inputs.src-nimhdf5-v0_3_10.repo  = "nimhdf5";
-  inputs.src-nimhdf5-v0_3_10.dir   = "";
   inputs.src-nimhdf5-v0_3_10.type  = "github";
+  
+  inputs."github.com/vindaar/seqmath".owner = "nim-nix-pkgs";
+  inputs."github.com/vindaar/seqmath".ref   = "master";
+  inputs."github.com/vindaar/seqmath".repo  = "github.com/vindaar/seqmath";
+  inputs."github.com/vindaar/seqmath".dir   = "";
+  inputs."github.com/vindaar/seqmath".type  = "github";
+  inputs."github.com/vindaar/seqmath".inputs.nixpkgs.follows = "nixpkgs";
+  inputs."github.com/vindaar/seqmath".inputs.flakeNimbleLib.follows = "flakeNimbleLib";
   
   outputs = { self, nixpkgs, flakeNimbleLib, ...}@deps:
   let 
