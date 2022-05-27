@@ -1317,6 +1317,7 @@
     "refs/heads/csizeFixes",
     "refs/heads/csizeIsUnsigned",
     "refs/heads/fixCopyAttributes",
+    "refs/heads/fixDelete",
     "refs/heads/fixDestroyFixFailOpen",
     "refs/heads/fixDestroyHooks",
     "refs/heads/fixHighLevelExample",
