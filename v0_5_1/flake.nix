@@ -7,11 +7,11 @@
   inputs.flakeNimbleLib.type  = "github";
   inputs.flakeNimbleLib.inputs.nixpkgs.follows = "nixpkgs";
   
-  inputs.src-nimhdf5-v0_4_1.flake = false;
-  inputs.src-nimhdf5-v0_4_1.ref   = "refs/tags/v0.4.1";
-  inputs.src-nimhdf5-v0_4_1.owner = "Vindaar";
-  inputs.src-nimhdf5-v0_4_1.repo  = "nimhdf5";
-  inputs.src-nimhdf5-v0_4_1.type  = "github";
+  inputs.src-nimhdf5-v0_5_1.flake = false;
+  inputs.src-nimhdf5-v0_5_1.ref   = "refs/tags/v0.5.1";
+  inputs.src-nimhdf5-v0_5_1.owner = "Vindaar";
+  inputs.src-nimhdf5-v0_5_1.repo  = "nimhdf5";
+  inputs.src-nimhdf5-v0_5_1.type  = "github";
   
   inputs."github.com/vindaar/seqmath".owner = "nim-nix-pkgs";
   inputs."github.com/vindaar/seqmath".ref   = "master";
@@ -24,13 +24,13 @@
   outputs = { self, nixpkgs, flakeNimbleLib, ...}@deps:
   let 
     lib  = flakeNimbleLib.lib;
-    args = ["self" "nixpkgs" "flakeNimbleLib" "src-nimhdf5-v0_4_1"];
+    args = ["self" "nixpkgs" "flakeNimbleLib" "src-nimhdf5-v0_5_1"];
     over = if builtins.pathExists ./override.nix 
            then { override = import ./override.nix; }
            else { };
   in lib.mkRefOutput (over // {
     inherit self nixpkgs ;
-    src  = deps."src-nimhdf5-v0_4_1";
+    src  = deps."src-nimhdf5-v0_5_1";
     deps = builtins.removeAttrs deps args;
     meta = builtins.fromJSON (builtins.readFile ./meta.json);
   } );
